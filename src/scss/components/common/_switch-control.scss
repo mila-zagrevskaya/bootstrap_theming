@@ -1,0 +1,20 @@
+.form-check-input{
+  border: 1px solid;
+  transform: translateY(50%);
+  @include themify($themes) {
+    border-color: themed("primary");
+  }
+}
+
+.form-check-input:checked {
+  @include themify($themes) {
+    background-color: themed("primary");
+    border-color: themed("primary");
+  }
+}
+
+.form-check-label {
+  @include themify($themes) {
+    color: themed("main-font-color");
+  }
+}

@@ -1,0 +1,23 @@
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  @include themify($themes) {
+    background-color: themed('background-overlay');
+  }
+}
+
+.page-content {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0%;
+}
+
+.section {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.part {
+  padding-top: 40px;
+}

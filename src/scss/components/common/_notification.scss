@@ -1,0 +1,48 @@
+.notification {
+  width: 100%;
+  padding: 20px 25px;
+  font-size: 1.3em;
+  box-shadow: 0 12px 20px -10px rgb(0 172 193 / 28%), 0 4px 20px 0px rgb(0 0 0 / 12%), 0 7px 8px -5px rgb(0 172 193 / 20%);
+  margin-bottom: 20px;
+
+  @include themify($themes) {
+    color: themed("button-font-color");
+  }
+}
+
+.notification-body {
+  display: flex;
+}
+
+.notification-title {
+  margin: 0 25px;
+  text-transform: uppercase;
+  vertical-align: -.35em;
+}
+
+.notification-content {
+  flex: 1 1 auto;
+}
+
+.notification-text {
+  margin: 0;
+  vertical-align: -.30em;
+}
+
+.close {
+  .notification & {
+    font-size: calc(1.7rem + 0.5vw);
+    line-height: 1;
+    text-align: end;
+    @include themify($themes) {
+      color: themed("button-font-color");
+      text-shadow: 0 1px 0 themed("button-font-color");
+    }
+  }
+}
+
+button.close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}

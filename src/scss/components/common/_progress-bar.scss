@@ -1,0 +1,39 @@
+.progress-box {
+  font-size: 1em;
+  padding: 15px 0;
+  @include themify($themes) {
+    color: themed('main-font-color');
+  }
+}
+
+.progress-label {
+  text-align: end;
+}
+
+.progress{
+  position: relative;
+  height: 8px;
+  @include themify($themes) {
+    background-color: themed("primary-opacity");
+  }
+}
+
+.progress-bar {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  @include themify($themes) {
+    background-color: themed("primary");
+  }
+  transition: background-color $transition;
+  animation: go-left-right 2s linear 1;
+  animation-fill-mode: forwards;
+  @keyframes go-left-right {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}

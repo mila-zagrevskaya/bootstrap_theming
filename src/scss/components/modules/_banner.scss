@@ -1,0 +1,28 @@
+.banner {
+  position: relative;
+}
+
+.banner-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  @include themify($themes) {
+    background-color: themed('background-overlay');  
+  }
+}
+
+.carousel-item {
+  overflow: hidden;
+  height: 95vh;
+}
+
+.carousel-img {
+  height: 100%;
+  object-fit: cover;
+}

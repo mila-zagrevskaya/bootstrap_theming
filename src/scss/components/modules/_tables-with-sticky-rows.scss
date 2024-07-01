@@ -1,0 +1,84 @@
+.tables-with-sticky-rows {
+  position: relative;
+  max-height: 600px;
+  width: 100%;
+  overflow: scroll;
+}
+#table-scroll {
+  &::-webkit-scrollbar {
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    width: 7px;
+    height: 7px;
+    @include themify($themes) {
+      background: themed("secondary-background-color");
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;    
+    @include themify($themes) {
+      background: themed("primary");
+    }
+  }
+}
+table {
+  border-collapse: collapse;
+  caption-side: top;
+  text-transform: capitalize;
+  @include themify($themes) {
+    background: themed("secondary-background-color");
+  }
+}
+td,
+th {
+  border: 1px solid;
+  padding: 10px;
+  min-width: 200px;
+  text-align: center;
+  @include themify($themes) {
+    border-color: themed("primary-dark");
+  }
+}
+thead th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -2px;
+  z-index: 2;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-align: center;
+  @include themify($themes) {
+    color: themed("button-font-color");
+    background: themed("primary-dark");
+    box-shadow: 0 0 0 1px themed("primary-dark");
+  }
+  &:first-child {
+    left: 0;
+    z-index: 3;
+  }
+}
+tbody {
+  overflow: scroll;
+  height: 200px;
+}
+.large-td {
+  min-width: 500px;
+}
+.table-item-img {
+  display: block;
+  max-width: 200px;
+}
+tr > :first-child {
+  position: -webkit-sticky;
+  position: sticky;
+  left: -2px;
+  text-transform: uppercase;
+  @include themify($themes) {
+    color: themed("button-font-color");
+    background: themed("primary-dark");
+  }
+}
+tr > :first-child {
+  @include themify($themes) {
+    box-shadow: inset 0px 1px themed("primary-dark");
+  }
+}

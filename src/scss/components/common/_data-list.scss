@@ -1,0 +1,7 @@
+.form-label {
+  .data-list &{
+    @include themify($themes) {
+      color: themed("main-font-color");
+    }
+  }
+}

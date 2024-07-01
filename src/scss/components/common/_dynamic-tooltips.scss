@@ -1,0 +1,22 @@
+.show-tooltips {
+  @include themify($themes) {
+    color: themed("main-font-color");
+  }
+}
+
+.tooltip-container {
+  position: absolute;
+  padding: 10px 15px;
+  max-height: 100%;
+  max-width: 250px;
+  overflow: hidden;
+  z-index: 1;
+  // display: none;
+  @include themify($themes) {
+    color: themed("main-font-color");
+    background: themed("border-color");
+  }
+  // .masonry-card:hover & {
+  //   display: block;
+  // }
+}

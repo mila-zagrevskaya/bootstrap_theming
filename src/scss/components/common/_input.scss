@@ -1,0 +1,51 @@
+.field {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  @include themify($themes) {
+    color: themed("main-font-color");
+  }
+}
+
+.form-control,
+.form-input {
+  font-family: inherit;
+  color: inherit;
+  font-size: 1em;
+  height: calc(3.5rem + 2px);
+  padding: 1rem 0.75rem;
+  border-radius: 2px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid;
+  width: 100%;
+  display: block;
+  transition: all 0.3s;
+  @include themify($themes) {
+    color: themed("main-font-color");
+    box-shadow: 0 1rem 2rem themed("background-overlay");
+    border-color: themed("primary");
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: transparent;
+  }
+  &::placeholder {
+    font-size: 1em;
+    color: inherit;
+  }
+}
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  @include themify($themes) {
+    border-color: themed("success-color");
+  }
+}
+
+.was-validated .form-control:invalid, .form-control.is-invalid {
+  @include themify($themes) {
+    border-color: themed("danger");
+  }
+}

@@ -1,0 +1,53 @@
+/*  RADIO  */
+.animated-radiobutton {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  justify-content: center;
+  margin: 2em 0 0;
+  @media (min-width: $breakpoint-md) {
+    margin: 0;
+  }
+}
+.animated-radio-control {
+  display: none;
+}
+.animated-radio-label {
+  box-shadow: $shadow;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1.4rem;
+    height: 1.4rem;
+    background: $grey-dark;
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+  &:hover {
+    &:after {
+      @include themify($themes) {
+        background-color: themed("primary");
+      }
+    }
+  }
+}
+.animated-radio-control:checked {
+  & ~ .animated-radio-label {
+    box-shadow: $inner-shadow;
+    &::after {
+      @include themify($themes) {
+        background-color: themed("primary");
+      }
+    }
+  }
+}

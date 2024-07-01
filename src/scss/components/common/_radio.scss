@@ -1,0 +1,127 @@
+.radio {
+  margin-bottom: 15px;
+  position: relative;
+}
+.radio-control {
+  display: none;
+}
+.radio-label {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  padding-left: 30px;
+  transition: all $transition;
+  .disabled-radio &,
+  .dis-selected-radio & {
+    cursor: default;
+  }
+}
+.radio-label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: all $transition;
+  border: 1px solid;
+  @include themify($themes) {
+    border-color: themed("border-color");
+  }
+  .disabled-radio & {
+    cursor: default;
+  }
+}
+.radio-label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all $transition;
+  @include themify($themes) {
+    background: themed("main-font-color");
+  }
+
+  .disabled-radio & {
+    display: none;
+    cursor: default;
+  }
+  .dis-selected-radio & {
+    @include themify($themes) {
+      background: themed("border-color");
+    }
+  }
+}
+.radio-control:checked + .radio-label,
+.radio-control:focus + .radio-label,
+.radio:hover .radio-label {
+  &:before {
+    border: 1px solid;
+    @include themify($themes) {
+      border-color: themed("primary");
+    }
+    .dis-selected-radio & {
+      cursor: default;
+      border: 1px solid;
+      @include themify($themes) {
+        border-color: themed("border-color");
+      }
+    }
+  }
+  &:after {
+    opacity: 1;
+    
+    .disabled-radio & {
+      opacity: 0;
+    }
+    .dis-selected-radio & {
+      opacity: 1;
+    }
+  }
+}
+.radio:hover .disabled-radio-label {
+  &:before {
+    border: 1px solid;
+    @include themify($themes) {
+      border-color: themed("border-color");
+    }
+  }
+}
+
+.radio-label-text {
+  min-width: 160px;
+  text-shadow: none;
+  transition: $transition;
+  @include themify($themes) {
+    color: themed("main-font-color");
+  }
+
+  .radio-control:checked + .radio-label &,
+  .radio-control:focus + .radio-label &,
+  .radio:hover & {
+    @include themify($themes) {
+      color: themed("main-font-color");
+    }
+    .disabled-radio &,
+    .dis-selected-radio & {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  .disabled-radio & {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: default;
+  }
+  .dis-selected-radio & {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: default;
+  }
+  .radio:hover .disabled-radio-label & {
+    text-shadow: none;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

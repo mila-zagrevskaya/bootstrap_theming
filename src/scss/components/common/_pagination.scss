@@ -1,0 +1,25 @@
+.pagination {
+  margin-top: 40px;
+}
+
+.page-link {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  @include themify($themes) {
+    color: themed("primary");
+  }
+  .page-item:first-child &,
+  .page-item:last-child & {
+    border-radius: 50%;
+  }
+}
+
+.page-link.active {
+  box-shadow: 0 4px 5px 0 rgb(0 172 193 / 14%), 0 1px 10px 0 rgb(0 172 193 / 12%), 0 2px 4px -1px rgb(0 172 193 / 20%);
+  @include themify($themes) {
+    color: themed("button-font-color");
+    background-color: themed("primary");
+    border-color: themed("primary");
+  }
+}

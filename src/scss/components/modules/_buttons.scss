@@ -1,0 +1,66 @@
+.btn {
+  cursor: pointer;
+  transition: $transition;
+  @include themify($themes) {
+    color: themed('button-font-color');  
+  }
+
+  &:hover {
+    @include themify($themes) {
+      color: themed('button-font-color');  
+    }
+  }
+}
+
+.btn-outline-primary {
+  @include themify($themes) {
+    color: themed('main-font-color');  
+    border-color: themed('primary'); 
+  }
+  &:hover,
+  &:focus {
+    @include themify($themes) {
+      background-color: themed('primary'); 
+    }
+  }
+}
+
+.btn-primary {
+  @include themify($themes) {
+    border-color: themed('primary'); 
+    background-color: themed('primary'); 
+  }
+  &:hover,
+  &:focus {
+    @include themify($themes) {
+      box-shadow: inset .2rem .2rem .5rem #828188, 
+      inset -.2rem -.2rem .5rem themed('primary'); 
+    }
+  }
+}
+
+.buttons-group-title {
+  margin: 30px 0 25px;
+}
+
+.btn-round {
+  border-radius: 30px !important;
+}
+
+.btn-circle {
+  border-radius: 50% !important;
+  font-size: 20px;
+}
+
+.button-link {
+  @include themify($themes) {
+    color: themed('secondary-button-color');  
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    @include themify($themes) {
+      color: themed('secondary-button-color');  
+    }
+  }
+}

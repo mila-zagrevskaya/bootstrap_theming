@@ -1,0 +1,40 @@
+.aside-navigation {
+  position: fixed;
+  right: 3%;
+  top: 50%;
+  padding: 5px;
+  z-index: 2;
+}
+
+.nav-link {
+  cursor: pointer;
+  .aside-navigation & {
+    width: 10px;
+    height: 10px;
+    padding: 6px;
+    border-radius: 50%;
+    margin: 15px 0;
+    @include themify($themes) {
+      color: themed("primary");
+      background-color: themed("primary");
+    }
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  border-bottom: 1px solid transparent;
+  @include themify($themes) {
+    color: themed("main-font-color");
+  }
+  &:hover {
+    @include themify($themes) {
+      border-color: themed("primary");
+    }
+  }
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  @include themify($themes) {
+    border-color: themed("primary");
+  }
+}

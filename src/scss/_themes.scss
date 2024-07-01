@@ -1,0 +1,54 @@
+$black: #000;
+$blue-with-opacity: #010e4660;
+$white: #fff;
+$white-with-opacity: #ffffff70;
+$light-grey: #777;
+$grey-light-1: #E4EBF5;
+$grey-light-2: #c8d0e7;
+$grey-light-3: #bec8e4;
+$grey-dark: #9baacf;
+$grey-700: #495057;
+$dark-grey: #3c4858;
+$pink-500: #d63384;
+$pink-500-opacity: #d6338470;
+$red-500: #e52d27;
+$blue-400: #55acee;
+$blue-700: #3b5998;
+$teal-400: #4caf50;
+$cyan-400-opacity: #3dd5f370;
+
+$themes: (
+  "light": (
+    primary-light: $cyan-200,
+    primary:  $cyan-400,
+    primary-dark: $cyan-600,
+    primary-opacity: $cyan-400-opacity,
+    main-font-color: $dark-grey,
+    secondary-font-color: $light-grey,
+    main-background-color: $white,
+    background-overlay: $white-with-opacity,
+    secondary-background-color: $white,
+    border-color: $grey-700,
+    button-font-color: $white,
+    secondary-button-color: $cyan-400,
+    success-color: $teal-400,
+    danger: $red-500
+  ),
+
+  "dark": (
+    primary-light: $pink-300,
+    primary:  $pink-500,
+    primary-dark: $pink-700,
+    primary-opacity: $pink-500-opacity,
+    main-font-color: $white,
+    main-background-color: #010e46,
+    secondary-font-color: $light-grey,
+    background-overlay: $blue-with-opacity,
+    secondary-background-color: $white,
+    border-color: $light-grey,
+    button-font-color: $white,
+    secondary-button-color: $pink-500,
+    success-color: $teal-400,
+    danger: $red-500
+  ),
+);

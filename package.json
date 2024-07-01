@@ -1,0 +1,59 @@
+{
+  "name": "bootstrap_theming",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.1",
+    "babel-preset-mobx": "^2.0.0",
+    "bootstrap": "^5.0.0-beta2",
+    "bootstrap-icons": "^1.4.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "mobx": "^6.3.0",
+    "mobx-react": "^7.1.0",
+    "mobx-react-lite": "^3.2.0",
+    "node-fetch": "^2.6.1",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-scroll": "^1.8.2",
+    "react-scrollchor": "^6.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "unsplash-js": "^7.0.11",
+    "web-vitals": "^1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.27.0",
+    "eslint-plugin-react": "^7.23.2"
+  }
+}

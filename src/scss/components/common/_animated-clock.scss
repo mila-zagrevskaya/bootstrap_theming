@@ -1,0 +1,105 @@
+.animated-clock {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  width: 200px;
+  height: 200px;
+  justify-self: center;
+  box-shadow: $shadow;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 2em 0 0;
+  @media (min-width: $breakpoint-md) {
+    margin: 0;
+  }
+  .animated-clock-hand {
+    position: absolute;
+    transform-origin: bottom;
+    bottom: 50%;
+    border-radius: 0.2rem;
+    z-index: 200;
+  }
+  .animated-clock-hours {
+    width: 6px;
+    height: 62px;
+    background: $grey-light-3;
+  }
+  .animated-clock-minutes {
+    width: 4px;
+    height: 75px;
+    background: $grey-dark;
+  }
+  .animated-clock-seconds {
+    width: 2px;
+    height: 75px;
+    @include themify($themes) {
+      background: themed("primary");
+    }
+  }
+  .animated-clock-point {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    z-index: 300;
+    @include themify($themes) {
+      background: themed("primary");
+    }
+  }
+  .animated-clock-marker {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: $inner-shadow;
+    &::after {
+      content: "";
+      width: 60%;
+      height: 60%;
+      position: absolute;
+      box-shadow: inset 1px 1px 1px $grey-light-2, inset -1px -1px 1px $white;
+      border-radius: 50%;
+      top: 20%;
+      left: 20%;
+      filter: blur(1px);
+    }
+    .animated-clock-marker-1,
+    .animated-clock-marker-2,
+    .animated-clock-marker-3,
+    .animated-clock-marker-4 {
+      position: absolute;
+      border-radius: 1px;
+      box-shadow: inset 1px 1px 1px $grey-light-2, inset -1px -1px 1px $white;
+    }
+    .animated-clock-marker-1,
+    .animated-clock-marker-2 {
+      width: 4px;
+      height: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .animated-clock-marker-3,
+    .animated-clock-marker-4 {
+      width: 12px;
+      height: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .animated-clock-marker-1 {
+      top: 2%;
+    }
+    .animated-clock-marker-2 {
+      top: 98%;
+      transform: translate(-50%, -0.6rem);
+    }
+    .animated-clock-marker-3 {
+      left: 3%;
+    }
+    .animated-clock-marker-4 {
+      left: 98%;
+      transform: translate(-50%, -0.6rem);
+    }
+  }
+}

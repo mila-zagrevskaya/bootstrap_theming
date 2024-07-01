@@ -1,0 +1,48 @@
+.animated-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  margin: 2em 0 0;
+  @media (min-width: $breakpoint-md) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    margin: 0;
+  }
+}
+.animated-input {
+  width: 100%;
+  height: 4rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.4em;
+  padding-left: 55px;
+  box-shadow: $inner-shadow;
+  background: none;
+  font-family: inherit;
+  color: $grey-dark;
+  &::placeholder {
+    color: $grey-light-3;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: $shadow;
+    + .animated-search-icon {
+      path {
+        @include themify($themes) {
+          fill: themed("primary");
+        }
+      }
+    }
+  }
+}
+.animated-search-icon {
+  height: 2rem;
+  position: absolute;
+  padding: 0 10px 0 15px;
+  display: flex;
+  transition: 0.3s ease;
+  path {
+    fill: $grey-dark;
+  }
+}

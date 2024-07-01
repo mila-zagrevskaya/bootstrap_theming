@@ -1,0 +1,33 @@
+@import "bootstrap/scss/functions"; 
+@import "bootstrap/scss/variables";
+
+$colors: (
+  $black: #000,
+  $white: #fff,
+  $yellow: #ff9800,
+  $purple: #9c27b0,
+  $red-500:#e52d27,
+  $pink-500: #d63384,
+  $blue-400: #55acee,
+  $blue-500: #0976b4,
+  $blue-700: #3b5998,
+  $teal-400: #4caf50,
+);
+
+$theme-colors: (
+  default: $gray-500,
+  primary:  $pink-500,
+  info: $cyan-600,
+  success: $teal-500,
+  warning: $yellow,
+  danger: $red-500, 
+  is-valid: $teal-400,
+  twitter: $blue-400,
+  facebook: $blue-700,
+  instagram: $pink-500,
+  youtube: $red-500,
+  linkedin: $blue-500,
+  btn-text-color: $white,
+);
+
+@import "bootstrap";

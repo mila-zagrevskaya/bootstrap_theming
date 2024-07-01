@@ -1,0 +1,37 @@
+.animations-components {
+  min-height: 90vh;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4ebf5;
+  border-radius: 2rem;
+  padding: 30px;
+  @media (min-width: $breakpoint-md) {
+    min-height: 85vh;
+  }
+}
+.animations-components-container {
+  padding: 70px 30px;
+  width: 90%;
+  height: 80%;
+  border-radius: 3rem;
+  box-shadow: 0.8rem 0.8rem 1.4rem $grey-light-2, -0.2rem -0.2rem 1.8rem $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: $breakpoint-sm) {
+    display: grid;
+    grid-template-rows: repeat(autofit, min-content);
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+  }
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(3, 1fr);
+    width: 95%;
+    max-height: 85%;
+    justify-content: space-between;
+  }
+}

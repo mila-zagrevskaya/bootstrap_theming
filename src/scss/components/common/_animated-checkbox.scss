@@ -1,0 +1,57 @@
+// CHECKBOX start
+.animated-checkbox {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+  justify-content: center;
+  justify-items: center;
+  margin: 2em 0 0;
+  @media (min-width: $breakpoint-md) {
+    margin: 0;
+  }
+  .animated-checkbox-control {
+    display: none;
+  }
+  .checkbox-1,
+  .checkbox-2 {
+    display: flex;
+    justify-content: center;
+  }
+}
+.animated-checkbox-label {
+  box-shadow: $shadow;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  width: 45px;
+  height: 45px;
+  &:hover {
+    svg {
+      @include themify($themes) {
+        fill: themed("primary");
+      }
+    }
+  }
+  .icon-checkmark {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $grey-dark;
+    transition: 0.3s ease;
+  }
+}
+.animated-checkbox-control:checked {
+  & ~ .animated-checkbox-label {
+    box-shadow: $inner-shadow;
+    svg {
+      @include themify($themes) {
+        color: themed("primary");
+        fill: themed("primary");
+      }
+    }
+  }
+}
+// CHECKBOX end
